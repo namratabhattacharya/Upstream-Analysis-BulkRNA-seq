@@ -38,6 +38,11 @@ dlist <- calcNormFactors(dlist, method = "TMM")
 cat("\nNormalised gene expression:\n")
 dlist$samples$norm.factors
 
+#boxplot
+x2 <- calcNormFactors(dlist)  
+lcpm <- cpm(x2, log=TRUE)
+boxplot(lcpm)
+
 #MDS plot
 plotMDS(dlist, col = as.numeric(group))
 
