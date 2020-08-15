@@ -158,13 +158,13 @@ mv *.results Result_ReadQuant/
 mv filelabel.txt Result_ReadQuant/
 
 mkdir Result_AlignPct
-mv *.html  Result_AlignPct\
-mv *.zip  Result_AlignPct\
+mv *.html  Result_AlignPct/
+mv *.zip  Result_AlignPct/
 if [ $readtype = "PE" ] 
 then
-    mv *_1_val_1.fq  Result_AlignPct\
-    mv *_2_val_2.fq  Result_AlignPct\
+    mv *_1_val_1.fq  Result_AlignPct/
+    mv *_2_val_2.fq  Result_AlignPct/
 else
-    mv *_trimmed.fq  Result_AlignPct\
+    mv *_trimmed.fq  Result_AlignPct/
 fi
 rm -r SRR*
