@@ -1,16 +1,17 @@
 # Upstream-Analysis
 
-##Pipeline followed -  
-Trim-galore, STAR, RSEM, R(EdgeR, Limma)
+## Pipeline followed -  
+Differential Expression Analysis using Trim-galore, STAR, RSEM, R(EdgeR, Limma)
 
-##Run Command -
+## Run Command -
+
 ```bash
 bash DEpipeline1_v2.sh
 ```
+DEpipelinev1.sh will produce the following result-
+1. Directory *Result_ReadQuant* will store RSEM output ( genes.results, isoforms.results)
+2.
 
-Rscript DEpipeline.R
-The parameters in the script are static. I will change it after the discussion.
-
-Output- Here I have tried to do differential gene expression analysis between tumor and non-tumor samples with DE levels.
-Output Files are attached in the mail -  Result_DE_tumor_v_nontumor.txt, Rplots.pdf
-Voom plot is not giving the correct result. Further filtration is required.
+```bash
+Rscript DEpipeline2_v2.R
+```
