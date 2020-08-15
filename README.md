@@ -1,10 +1,10 @@
 # Upstream-Analysis
 
-## Pipeline followed -  
+## Pipeline followed   
 Differential Expression Analysis using Trim-galore, STAR, RSEM, R(EdgeR, Limma)
 
 
-## Run Command -
+## Run Command 
 Run-time input to DEpipeline1_v2.sh are as follows- 
 1. Genome type (human/mouse)
 2. Number of samples
