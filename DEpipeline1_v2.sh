@@ -116,7 +116,7 @@ then
     then
     	STAR --genomeDir ./sidx_mm --runMode alignReads --runThreadN $ncore --readFilesIn ${read}_1_val_1.fq ${read}_2_val_2.fq --quantMode TranscriptomeSAM --twopassMode Basic --outSAMtype BAM SortedByCoordinate --outSAMunmapped Within  --outFilterMultimapNmax 10 --outFileNamePrefix  ${read}
     	echo "Read quantification"
-    	rsem-calculate-expression --paired-end --alignments --bam --no-bam-output -p 10 ${read}Aligned.toTranscriptome.out.bam  ./rsem_mm/GRCm38 ${read}
+    	rsem-calculate-expression --paired-end --alignments --bam --no-bam-output -p $ncore ${read}Aligned.toTranscriptome.out.bam  ./rsem_mm/GRCm38 ${read}
     else
        echo "Error: Fault in processing"  ${read} "..."
        exit
@@ -140,7 +140,7 @@ then
     then
     	STAR --genomeDir ./sidx_mm --runMode alignReads --runThreadN $ncore --readFilesIn ${read}_trimmed.fq --quantMode TranscriptomeSAM --twopassMode Basic --outSAMtype BAM SortedByCoordinate --outSAMunmapped Within  --outFilterMultimapNmax 10 --outFileNamePrefix  ${read}
     	echo "Read quantification"
-    	rsem-calculate-expression  --alignments --bam --no-bam-output -p 10 ${read}Aligned.toTranscriptome.out.bam  ./rsem_mm/GRCm38 ${read}
+    	rsem-calculate-expression  --alignments --bam --no-bam-output -p $ncore ${read}Aligned.toTranscriptome.out.bam  ./rsem_mm/GRCm38 ${read}
     else
        echo "Error: Fault in processing"  ${read} "..."
        exit
