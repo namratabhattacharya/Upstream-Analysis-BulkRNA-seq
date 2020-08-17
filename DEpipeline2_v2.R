@@ -51,7 +51,7 @@ plotMDS(dlist, col = as.numeric(group))
 design <- model.matrix(~0 + group)
 colnames(design) <- gsub("group", "", colnames(design))
 ##Comparison between tumor and nontumor
-contr.matrix <- makeContrasts(tumorvsnontumor = tumor-nontumor, levels = colnames(design))
+contr.matrix <- makeContrasts(subtype1vsubtype2 = subtype1 - subtype2, levels = colnames(design))
 cat("\nContrast matrix:\n")
 contr.matrix
 
