@@ -4,8 +4,6 @@ read gentype
 ncore=8
 echo -n "Enter number samples: "
 read num 
-echo -n "Enter read length"
-read rlen
 echo -n "Enter read types (PE/SE): "
 read readtype
 echo -e "filename\tlabel"> filelabel.txt
@@ -107,7 +105,7 @@ then
     echo "Importing" $read "..." 
     fastq-dump -I --split-files $read
     echo "Quality Checking..."
-    ~/TrimGalore-0.6.5/trim_galore --fastqc --illumina --length $rlen --fastqc --cores $ncore  --paired ${read}_1.fastq ${read}_2.fastq 
+    ~/TrimGalore-0.6.5/trim_galore --fastqc --illumina --length 35 --fastqc --cores $ncore  --paired ${read}_1.fastq ${read}_2.fastq 
     if [ $gentype = "human" ]
     then
     	echo "Mapping..."
@@ -131,7 +129,7 @@ then
     echo "Importing" $read "..." 
     fastq-dump $read
     echo "Quality Checking..."
-    ~/TrimGalore-0.6.5/trim_galore --fastqc --illumina --length $rlen --fastqc --cores $ncore ${read}.fastq 
+    ~/TrimGalore-0.6.5/trim_galore --fastqc --illumina --length 35 --fastqc --cores $ncore ${read}.fastq 
     if [ $gentype = "human" ]
     then
     	echo "Mapping..."
