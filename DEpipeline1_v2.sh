@@ -12,7 +12,7 @@ for (( i=1; i<$num+1; i++ ));
 do
   echo "File" $i ":" 
   read sra[$i]
-  echo "Label" $i "(tumor/nontumor):"
+  echo "Label" $i "(subtype1/subtype2):"
   read label
   echo -e ${sra[i]}".genes.results\t"$label >> filelabel.txt
 done
