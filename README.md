@@ -8,10 +8,9 @@ Differential Expression Analysis using Trim-galore, STAR, RSEM, R(EdgeR, Limma)
 Run-time input to DEpipeline1_v2.sh are as follows- 
 1. Genome type (human/mouse)
 2. Number of samples
-3. Read length
 4. Read types (PE/SE)
 5. Accession number e.g. SRR11771595
-6. Label (tumor/nontumor)
+6. Label (subtype1/subtype2)
 
 ```bash
 bash DEpipeline1_v2.sh
