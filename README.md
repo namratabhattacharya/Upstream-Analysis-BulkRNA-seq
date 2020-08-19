@@ -21,7 +21,7 @@ DEpipeline1_v2.sh will produce the following result-
 3. *filelabel.txt* stored in */Result_ReadQuant* is a tab-seperated file which contain sample information
 
 ```bash
-setwd( "/path/to/Result_ReadQuant" )
+cd /path/to/Result_ReadQuant
 ```
 Before executing DEpipeline2_v2.R change the working directory to  */Result_ReadQuant*. 
 ```bash
