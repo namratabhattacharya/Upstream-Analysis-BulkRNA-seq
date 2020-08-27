@@ -1,0 +1,5 @@
+filename	label
+SRR8528559.genes.results	subtype1
+SRR8528583.genes.results	subtype1
+SRR8528581.genes.results	subtype2
+SRR8528582.genes.results	subtype2
